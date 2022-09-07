@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Frontpage from '../components/Frontpage'
 import LoaderPacman from '../components/LoaderPacman'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -16,19 +17,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <LoaderPacman />
+        <Link href="/j">
+        <Image src="/closed.png" alt="Picture of a closed Samsung Fold4 with a case " width={100} height={600} />
+
+        </Link>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+<p>Portofolio side for Kristoffer S S</p>
       </footer>
     </div>
   )
