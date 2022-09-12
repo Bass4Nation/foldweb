@@ -1,12 +1,12 @@
 
 
 
-const fullscreen = ({children}) => {
+// const fullscreen = ({children}) => {
 
 
-    return ( 
-        <section>
-            {children}
-        </section>
-    )
-}
+//     return ( 
+//         <section>
+//             {children}
+//         </section>
+//     )
+// }
