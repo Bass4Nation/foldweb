@@ -3,6 +3,7 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 
 const override: CSSProperties = {
   display: "block",
+  alignContent: "center",
   margin: "0 auto",
   borderColor: "red",
 };

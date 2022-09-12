@@ -14,6 +14,14 @@ const override: CSSProperties = {
   borderColor: "red",
 };
 
+// Simulere 2 sekunder lasting
+export async function getStaticProps() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  return {
+    props: {  }
+  }
+}
+
 
 const Home: NextPage = () => {
 
@@ -30,9 +38,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main} id="content">
-        <LoaderPacman />
         <Link href="/open">
-          <Image src="/closed.png" alt="Picture of a closed Samsung Fold4 with a case " width={100} height={600} />
+          <Image src="/fold/closed.png" alt="Picture of a closed Samsung Fold4 with a case " width={100} height={600} />
         </Link>
       </main>
 
