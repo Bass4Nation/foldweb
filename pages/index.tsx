@@ -1,12 +1,26 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Frontpage from '../components/Frontpage'
 import LoaderPacman from '../components/LoaderPacman'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
+import { useState, CSSProperties } from "react";
+
+
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
+
+
 const Home: NextPage = () => {
+
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#666666");
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,16 +29,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.main} id="content">
         <LoaderPacman />
-        <Link href="/j">
-        <Image src="/closed.png" alt="Picture of a closed Samsung Fold4 with a case " width={100} height={600} />
-
+        <Link href="/open">
+          <Image src="/closed.png" alt="Picture of a closed Samsung Fold4 with a case " width={100} height={600} />
         </Link>
       </main>
 
       <footer className={styles.footer}>
-<p>Portofolio side for Kristoffer S S</p>
+        <p>Portofolio side for Kristoffer S S</p>
       </footer>
     </div>
   )
